@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const createFile = (filename, content) =>{
-    fs.appendFileSync(filename, content, (err) => {
+    fs.writeFileSync(filename, content, (err) => {
         if (err) throw err;
         console.log('File Saved!');
       });
